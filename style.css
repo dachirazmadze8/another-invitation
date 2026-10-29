@@ -1,0 +1,163 @@
+/* ==========================================================================
+   Invitation page styles
+   Sections: 1. Variables  2. Base  3. Layout  4. Typography
+             5. Countdown  6. Details  7. Button
+   ========================================================================== */
+
+
+/* 1. Variables
+   -------------------------------------------------------------------------- */
+:root {
+  /* Colors */
+  --bg:     #1d2b3a;
+  --panel:  #26384b;
+  --ink:    #f4efe6;
+  --muted:  #b9c3cf;
+  --accent: #f2b84b;
+
+  /* Shape */
+  --radius:      14px;
+  --radius-pill: 999px;
+
+  /* Keep content clear of phone system bars */
+  box-sizing: border-box;
+  padding-top:    env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+
+/* 2. Base
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: env(safe-area-inset-top, 0px);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Georgia, Sylfaen, "Noto Serif Georgian", "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+
+/* 3. Layout
+   -------------------------------------------------------------------------- */
+main {
+  width: 100%;
+  max-width: 640px;
+  padding: 56px 24px 64px;
+  text-align: center;
+}
+
+
+/* 4. Typography
+   -------------------------------------------------------------------------- */
+h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2.6rem, 9vw, 4.4rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.hero {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin: 0 auto 40px;
+  border-radius: var(--radius);
+}
+
+.done {
+  margin: 0 0 44px;
+  color: var(--accent);
+  font-size: 1.6rem;
+}
+
+
+/* 5. Countdown
+   -------------------------------------------------------------------------- */
+.count {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 0 0 44px;
+}
+
+.unit {
+  padding: 18px 4px 14px;
+  background: var(--panel);
+  border-radius: var(--radius);
+}
+
+.num {
+  display: block;
+  color: var(--accent);
+  font-size: clamp(2rem, 9vw, 3.2rem);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.lab {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+
+/* 6. Details
+   -------------------------------------------------------------------------- */
+.details {
+  margin-bottom: 32px;
+  padding: 24px;
+  background: var(--panel);
+  border-radius: var(--radius);
+  text-align: left;
+}
+
+.details dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 20px;
+  margin: 0;
+}
+
+.details dt {
+  color: var(--muted);
+}
+
+.details dd {
+  margin: 0;
+}
+
+
+/* 7. Button
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: var(--accent);
+  border-radius: var(--radius-pill);
+  color: var(--bg);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
