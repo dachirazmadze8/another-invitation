@@ -1,6 +1,6 @@
 (function () {
   // Oct 30, 2026 at 8:30 AM (visitor's local time; month is 0-based)
-  var target = new Date(2026, 9, 30, 8, 30, 0);
+  var target = new Date(2026, 9, 30, 14, 00, 0);
   var $ = function (id) { return document.getElementById(id); };
   function pad(n) { return n < 10 ? "0" + n : "" + n; }
 
